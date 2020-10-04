@@ -1,9 +1,12 @@
-- name: COMP3331
-  link: /#
-  dropdown:
-    - name: Pre-Week 3 notes
-      link: /blog/COMP3331/PreWeek3_lectures/
-    - name: Application Layer (DNS, P2P, Video Streaming and CDN)
-      link: /blog/COMP3331/Week3_Lecture1/
+- name: Courses
+- link /#
+- dropdown: 
+  - name: COMP3331 - Computer Networks and Applications 
+    link: /#
+    dropdown:
+      - name: Pre-Week 3 notes
+        link: /blog/COMP3331/PreWeek3_lectures/
+      - name: Application Layer (DNS, P2P, Video Streaming and CDN)
+        link: /blog/COMP3331/Week3_Lecture1/
     
       

@@ -26,28 +26,29 @@ Humans can be identified by many ways, our names, our social security numbers, d
         - ability to update my own domain names
         - Don't want to track everybody's updates.
     - highly available
-#### Hierarchy
-    - Hierarchical namespace
-        - top level domains are at the top
-        - Domains are subtrees
-        - Name is leaf to root path
-        - instr.eecs.berkeley.edu -> this is a tree. first we go to the leaf instr then to the node eecs.... till we reach the root at edu
-    - Hierarchically administered
-        - A zone corresponds to a distinct contiguous portion of the DNS name space that is managed by a particular administrative authority. Like each of the namespaces could be within different zones, and each of those zones are managed by different people.
-    - Distributed hierarchy of servers
-        - Top of the hierarchy: Root servers. The location is hardwired into other servers.
-        - Next Level: Top level domains (TLD) servers
-            - .com, .edu,  and these are managed professionally
-        - Bottom Level: Authoritative DNS
-            - Store the name to address mapping
-            - Maintained by the corresponding administrative authority (Service provider or an organisation)
-            - These store the resource records for all DNS names in the domain that it has authority for.
-    - Each server can discover the servers that are responsible for the portions of the hierarchy
-        - Everyone knows who the root is
-        - Root servers know about all the Top level Domains.
-    - There used to be 13 root physical servers. They were then scaled because they worried about them going down. These physical servers are replicated all over the world. Here in Australia we have 25 root servers. The servers in Australia are numbered A - N. They all have the same IP address. For example all 'A' servers have the same IP address, all 'B' servers have the same IP address. Here anycasting is exploited, whereby if anyone has server 'A' as their destination, the routers along the way will direct the request to the closest 'A' server.
-- Host Aliasing: 
-    - A host with a complicated hostname can have one or more alias names. DNS can be invoked by an application to obtain the canonical hostname for a supplied alias hostname as well as the IP address of the host.
-- Mail Server Aliasing:
-    - 
+### Hierarchy
+- Hierarchical namespace
+    - top level domains are at the top
+    - Domains are subtrees
+    - Name is leaf to root path
+    - instr.eecs.berkeley.edu -> this is a tree. first we go to the leaf instr then to the node eecs.... till we reach the root at edu
+- Hierarchically administered
+    - A zone corresponds to a distinct contiguous portion of the DNS name space that is managed by a particular administrative authority. Like each of the namespaces could be within different zones, and each of those zones are managed by different people.
+- Distributed hierarchy of servers
+    - Top of the hierarchy: Root servers. The location is hardwired into other servers.
+    - Next Level: Top level domains (TLD) servers
+        - .com, .edu,  and these are managed professionally
+    - Bottom Level: Authoritative DNS
+        - Store the name to address mapping
+        - Maintained by the corresponding administrative authority (Service provider or an organisation)
+        - These store the resource records for all DNS names in the domain that it has authority for.
+- Each server can discover the servers that are responsible for the portions of the hierarchy
+    - Everyone knows who the root is
+    - Root servers know about all the Top level Domains.
+- There used to be 13 root physical servers. They were then scaled because they worried about them going down. These physical servers are replicated all over the world. Here in Australia we have 25 root servers. The servers in Australia are numbered A - N. They all have the same IP address. For example all 'A' servers have the same IP address, all 'B' servers have the same IP address. Here anycasting is exploited, whereby if anyone has server 'A' as their destination, the routers along the way will direct the request to the closest 'A' server.
+- When a host makes a DNS query, the query is set to it's local DNS server.
+    - The server has a cache of recent-name-to-address translation pairs
+    - Acts as a proxy, forwards a query into the hierarchy
+    - What this means is that if local DNS server cannot perform the translation, it sends the request to a root DNS server. The root server will send an IP address back to the local DNS regarding which server to contact and etc...
+- The root server does not support recursive queries as it put a burden on it due to how many requests that it gets.
 
