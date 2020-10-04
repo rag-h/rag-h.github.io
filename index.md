@@ -155,6 +155,7 @@ Humans can be identified by many ways, our names, our social security numbers, d
 - A DNS (domain name system), is essentially a directory service which translates hostnames into IP addresses. 
 - It is implemented in a hierarchy of many name servers
 - Application-Layer protocol: Hosts, name servers communicate to resolve names
+-blah
 
 
 
