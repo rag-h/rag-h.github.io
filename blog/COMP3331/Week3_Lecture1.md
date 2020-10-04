@@ -35,12 +35,12 @@ Humans can be identified by many ways, our names, our social security numbers, d
     - Hierarchically administered
         - A zone corresponds to a distinct contiguous portion of the DNS name space that is managed by a particular administrative authority. Like each of the namespaces could be within different zones, and each of those zones are managed by different people.
     - Distributed hierarchy of servers
-        - Top of the hierarchy: Root servers. The location is hardwired into other servers
+        - Top of the hierarchy: Root servers. The location is hardwired into other servers.
         - Next Level: Top level domains (TLD) servers
             - .com, .edu,  and these are managed professionally
         - Bottom Level: Authoritative DNS
             - Store the name to address mapping
-            - Maintained by the corresponding administrative authority
+            - Maintained by the corresponding administrative authority (Service provider or an organisation)
             - These store the resource records for all DNS names in the domain that it has authority for.
     - Each server can discover the servers that are responsible for the portions of the hierarchy
         - Everyone knows who the root is
