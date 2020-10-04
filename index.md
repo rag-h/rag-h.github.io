@@ -74,7 +74,57 @@ The application developer needs to make the decision about whether each request/
 ### The Conditional GET
 - Although caching can reduce user-preceived response times, the copy of an object residing in the cache may be stale. The object on the webserver may have been modified.
 - The request message uses the GET method and includes an IF-MODIFIED-SINCE header line.
-- The cache would
+- Process:
+    - Browser requests an object
+    - The cache would send a request to the server
+    - Server sends response message with the requested object
+    - Cache forwards the response message to the browser and caches the object locally.
+    - Cache stores the last-modified date and the object
+    - Blah blah sometimes late
+    - Browser requests the same object
+    - Since this could be modified, the cache ensures that it's contents are up to date by issuing a conditional GET.
+    - The conditional GET tells the server to send to object only if the object has been modified since the specified date.
+    - If not modified it will respond with "304 Not Modified". In this response the web server still sends a response message by not the requested object. This saves bandwidth and reduces user preceived time. 
+
+### HTTPS
+- HTTP is insecure
+- HTTPS: HTTP over a connection encrypted by the TLS (Transport Layer Security). Before the actual get requests are sent, the TCP connection is established and over that the TLS connection is also established between the browser and the server.
+    #### Issues with HTTP
+    - HTTP headers are big. As they are all text, they can be quite large.
+    - Objects have different dependencies (requiring extra RRT) If we have many small objects (images etc)
+    - Head of Line Blocking "Slow objects" Delay later requests. Since objects are serviced by objects sequentially, if the first object requires a lot of time to fetch, and this would mean that any subsequent requests cannot be sent back because the server is still waiting to service the first request. 
+    - Browsers often open parallel TCP connections to the servers, which places load on the network and servers and increases the throughput. This does reduce HOL blocking. But this is not very desireable due to its downside.
+    #### HTTP2
+    - Binary instead of text
+        - efficient to parse
+        - more compact
+        - less error prone.
+    - Responses are multiplexed over a single TCP connection
+        - Fast objects bypass slow objects (avoids HOL blocking)
+        - fewer handshakes
+    - Server can push things
+        - Rather than sending the base file and then waiting for the client to request the embedded objects, the server can just push those embedded objects to the client.
+## Electronic Mail 
+- Three major components
+    - User agents (browser basically)
+    - Mail servers
+        - Mailbox contains incoming messages for a user
+        - Message Queue: outgoing mail messages
+
+    - Simple Mail Transfer Protocol: Protocol used to exchange mails between the mail servers.
+- SMPT
+    - Older than HTTP
+    - Uses TCP
+    - Three phases
+        -
+
+
+
+
+
+
+    
+
 
 
 
