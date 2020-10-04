@@ -116,9 +116,36 @@ The application developer needs to make the decision about whether each request/
     - Older than HTTP
     - Uses TCP
     - Three phases
-        -
-
-
+        - handshaking
+        - Transfer of messages
+        - closure
+    - Proceedure:
+        - Email is written with end users email address
+        - User agent sends the message to the mail server where it is placed in the message queue
+        - Client SMPT sees the message on the message queue and opens up a TCP connection to an SMPT server on the recipients mail server
+        - SMPT handshaking takes place, and the mail gets sent into the TCP connection
+        - At the recipients mail server, the SMPT receives the message
+        - Mail server places the mail into the mailbox
+        - Recipient invokes the user agent and reads the message
+    - Direct transfer, SMPT does not use intermediate mail servers, and only communicates directly. 
+    - SMPT is persistent
+    - Uses ASCII
+    - Uses CRLF and CRLF to determine the end of the message
+    - Comparisons with HTTP
+        - HTTP: pull
+        - SMTP: Push
+        - Both have ASCII command/response interaction and status codes etc
+        - HTTP each object is encapsulated in its own response msg
+        - SMPT: Multipart message
+#### Mail Access Protocols
+- When the user is actually pulling the email, that takes place over a different protocol.
+    - POP (post office protocol): 
+    - IMAP (Internet mail access protocol):
+    - HTTP(S): Gmail, Yahoo...
+- Why do we need to have the sender's mail sever? What is the catch? A user agent can directly connect with the recipients mail server without the need of the senders mail server?
+    - ANS: The recipients server might not be ready to receive the email. Our mails could get lost etc
+- Why do we have a separate Receivers mail server? Can't the recipient run the mail server on their own end system?
+    - ANS: THe end users server may not always be on.
 
 
 
