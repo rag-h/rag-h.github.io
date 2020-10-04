@@ -45,7 +45,7 @@ Humans can be identified by many ways, our names, our social security numbers, d
     - Each server can discover the servers that are responsible for the portions of the hierarchy
         - Everyone knows who the root is
         - Root servers know about all the Top level Domains.
-    - There used to be 13 root physical servers. They were then scaled because they worried about them going down. These physical servers are replicated all over the world. Here in Australia we have 25 root servers.
+    - There used to be 13 root physical servers. They were then scaled because they worried about them going down. These physical servers are replicated all over the world. Here in Australia we have 25 root servers. The servers in Australia are numbered A - N. They all have the same IP address. For example all 'A' servers have the same IP address, all 'B' servers have the same IP address. Here anycasting is exploited, whereby if anyone has server 'A' as their destination, the routers along the way will direct the request to the closest 'A' server.
 - Host Aliasing: 
     - A host with a complicated hostname can have one or more alias names. DNS can be invoked by an application to obtain the canonical hostname for a supplied alias hostname as well as the IP address of the host.
 - Mail Server Aliasing:
