@@ -147,6 +147,17 @@ The application developer needs to make the decision about whether each request/
 - Why do we have a separate Receivers mail server? Can't the recipient run the mail server on their own end system?
     - ANS: THe end users server may not always be on.
 
+# Application Layer (DNS, P2P, Video Streaming and CDN)
+### DNS
+Humans can be identified by many ways, our names, our social security numbers, driver's license number etc. Just like how humans can be identified in many ways, so can Internet Hosts. (Hostname e.g. = www.yahoo.com). 
+- Hostnames provide little information about the location of the host. 
+- Hosts are also identified by so-called IP addresses, as routers do not understand the hostname string.
+- A DNS (domain name system), is essentially a directory service which translates hostnames into IP addresses. 
+- It is implemented in a hierarchy of many name servers
+- Application-Layer protocol: Hosts, name servers communicate to resolve names
+
+
+
 
 
 
