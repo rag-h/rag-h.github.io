@@ -1,6 +1,6 @@
 - name: Courses
-- link /#
-- dropdown: 
+  link: /#
+  dropdown: 
   - name: COMP3331 - Computer Networks and Applications 
     link: /#
     dropdown:
