@@ -52,3 +52,17 @@ Humans can be identified by many ways, our names, our social security numbers, d
     - What this means is that if local DNS server cannot perform the translation, it sends the request to a root DNS server. The root server will send an IP address back to the local DNS regarding which server to contact and etc...
 - The root server does not support recursive queries as it put a burden on it due to how many requests that it gets.
 
+### DNS Records
+- Resource Records have the following format (name,value,type,ttl)
+- Basically when a request is made for a translation to a DNS they can take one these forms
+- Type A
+    - Name is Hostname
+    - Value is IP address
+- Type NS: 
+    - Name is domain
+    - value is hostname of authoritative name server for this domain
+- Type CNAME:
+    - name is alias name for some canonical (www.ibm.com is actually servereast.backup2.ibm.com)
+    - value  is canonical name
+- Type = MX
+    - value is the name of the mailserver associated with that name
