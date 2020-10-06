@@ -66,3 +66,25 @@ Humans can be identified by many ways, our names, our social security numbers, d
     - value  is canonical name
 - Type = MX
     - value is the name of the mailserver associated with that name
+
+### DNS protocol.messages
+- query and reply messages have the same message formatt
+- msg header
+    - id: 16# (a query will have a particular number and the response to this query uses the same id)
+    - flags to indicate:
+        - query or reply
+        - recursion desirable
+        - recursion available
+        - reply is authoritative
+    - has number of questions if it is a query or answers if it is a response
+    - contains name, type fields, RR's
+    - records for authoritative servers
+
+- Image of response from a dig
+![](images/dig_oxford.png)
+From the image:
+- We are requesting for a type A record
+- The answer has four values which are separate resource records. There are 4 actual webservers for oxford. 
+- 
+
+

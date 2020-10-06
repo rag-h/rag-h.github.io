@@ -483,6 +483,41 @@ code {
 </ul>
 </li>
 </ul>
+<h3 id="dns-protocolmessages">DNS protocol.messages</h3>
+<ul>
+<li>
+<p>query and reply messages have the same message formatt</p>
+</li>
+<li>
+<p>msg header</p>
+<ul>
+<li>id: 16# (a query will have a particular number and the response to this query uses the same id)</li>
+<li>flags to indicate:
+<ul>
+<li>query or reply</li>
+<li>recursion desirable</li>
+<li>recursion available</li>
+<li>reply is authoritative</li>
+</ul>
+</li>
+<li>has number of questions if it is a query or answers if it is a response</li>
+<li>contains name, type fields, RR's</li>
+<li>records for authoritative servers</li>
+</ul>
+</li>
+<li>
+<p>Image of response from a dig
+<img src="file:///c:/uni/rag-h.github.io/blog/COMP3331/images/dig_oxford.png" alt="">
+From the image:</p>
+</li>
+<li>
+<p>We are requesting for a type A record</p>
+</li>
+<li>
+<p>The answer has four values which are separate resource records. There are 4 actual webservers for oxford.</p>
+</li>
+<li></li>
+</ul>
 
 </body>
 </html>
