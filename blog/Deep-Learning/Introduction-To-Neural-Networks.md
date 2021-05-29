@@ -3,4 +3,4 @@ Neural networks form the basis of deep learning, which algorithms are inspired b
 
 A neural network consists of several neurons and three layers. The input later, the output layer and the middle hidden layer. There are generally several hidden layers between the input and output layers. 
 
-![Structure of a neural network [Source](https://research.aimultiple.com/how-neural-networks-work/)](https://github.com/rag-h/rag-h.github.io/blob/master/blog/Deep-Learning/images/neural-network-structure.png)
+![Structure of a neural network ](https://github.com/rag-h/rag-h.github.io/blob/master/blog/Deep-Learning/images/neural-network-structure.png)[Image Source](https://research.aimultiple.com/how-neural-networks-work/)
