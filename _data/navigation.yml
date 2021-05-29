@@ -10,6 +10,8 @@
   dropdown:
     - name: Post 1
       link: /blog/NN/post1/
+    - name: Post 2
+      link: /blog/NN/post2/
 
   
     
