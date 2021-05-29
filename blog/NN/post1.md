@@ -1,9 +1,5 @@
 # What is Deep Learning?
-Deep learning is a subfield of machine learning which utilises alogrithms based on how the human brain works. It uses artificial neural networks to essentially learn from massive amounts of input data. The algorithm would perform a task repeatedly, making tweaks and adjustments everyime to improve the outcome. 
+Deep learning is a subfield of machine learning which utilizes algorithms based on how the human brain works. It uses artificial neural networks to essentially learn from massive amounts of input data. The algorithm would perform a task repeatedly, making tweaks and adjustments overtime to improve the outcome. The word deep represents the various layers that enable the learning to take place. Each of these layers is where the data is processed. [Source](https://www.forbes.com/sites/bernardmarr/2018/10/01/what-is-deep-learning-ai-a-simple-guide-with-8-practical-examples/?sh=5e67b8be8d4b)
 
-For example its very easy for humans to recognise and identify different animals, but how do we teach machines to do this?
+For example its very easy for humans to recognize and identify different animals, but how do we teach machines to do this? What about a human face?  Following traditional machine learning, we'd have to define what a face is to a computer. A face has eyes, ears and a mouth. Then we'd have to define what an eye, ear and a mouth is. This is pretty complicated. In deep learning, we can learn these things just by providing raw data. We can feed in faces into our deep learning algorithm and it will then develop some sort of hierarchical representation of detecting lines and edges and then eyes and a mouth followed by a face.
 
-| Area | Definition |
-|----- | ---------- |
-|Machine Learning|Teaching computers to recognise patterns in data|
-|Deep Learning| A Machine Learning technique that learns features and tasks directly from data|
