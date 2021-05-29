@@ -5,13 +5,13 @@
       link: /blog/COMP3331/PreWeek3_lectures/
     - name: Application Layer (DNS, P2P, Video Streaming and CDN)
       link: /blog/COMP3331/Week3_Lecture1/
-- name: NN
+- name: Deep Learning
   link: /#
   dropdown:
-    - name: Post 1
-      link: /blog/NN/post1/
-    - name: Post 2
-      link: /blog/NN/post2/
+    - name: Introduction to Deep Learning
+      link: /blog/Deep-Learning/Introduction-To-Deep-Learning/
+    - name: Introduction to Neural Networks
+      link: /blog/Deep-Learning/Introduction-To-Neural-Networks/
 
   
     
