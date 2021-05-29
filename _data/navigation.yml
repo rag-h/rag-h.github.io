@@ -8,7 +8,7 @@
 - name: NN
   link: /#
   dropdown:
-    - name: Template
+    - name: Post 1
       link: /blog/NN/post1/
 
   
