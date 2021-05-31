@@ -4,6 +4,7 @@ Neural networks form the basis of deep learning, which algorithms are inspired b
 A neural network consists of several neurons and three layers. The input later, the output layer and the middle hidden layer. There are generally several hidden layers between the input and output layers. 
 
 ![Structure of a neural network ](https://github.com/rag-h/rag-h.github.io/blob/master/blog/Deep-Learning/images/neural-network-structure.png)[Image Source](https://research.aimultiple.com/how-neural-networks-work/)
+<div><img src="images/neural-network-structure.png" class="img-responsive" alt=""> </div>
 
 ## How does a Neural Network Learn?
 This can be broken into two processes. Forward propagation and back propagation.
@@ -12,6 +13,7 @@ This can be broken into two processes. Forward propagation and back propagation.
 Flow of information from the input layer to the output layer. Neurons in the first layer connect to the next layer (first layer in the hidden layer) through channels. Each channel is assigned a numerical values called weights. The inputs are multiplied to the weights and their sum is sent as inputs to the hidden layer and each neuron in turn is associated to a numerical value called a bias. This bias is then added to the input sum. This input sum is then passed through to an activation function (a known non-linear function), which decides whether or not this neuron can contribute to the following layer. The output layer is a probability, where the neuron with the highest value determines what the output value is. 
 - The weight of the neuron tells us how important it is.
 - The bias allows the shifting function shift to the right or to the left.
+
 ### Back Propagation
 Information here goes from the output layer to the hidden layer. The output layer is supposed to be the final destination of the data, so why do have back propagation? In back propagation, the neural network evaluates its own performance and checks whether it is right or wrong. If it is wrong, the network utilises something called a loss function to quantify the deviation from the expected output. We would the go backwards and adjust the initial weights and the biases so that the values are now adjusted to better fit the prediction model. 
 
