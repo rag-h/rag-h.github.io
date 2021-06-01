@@ -17,3 +17,30 @@ This is because no matter how many layers we have, if we have a linear function,
 A loss function is way to quantify the deviation of the predicted output to the expected output. There are several different types of loss functions as well. The choice of the loss function is determined by what project we are working on.
 
 ## Optimisers
+During training, the parameters get adjusted to minimize the loss function to make our model as optimized as possible. The optimisers tie together the loss function and the different model parameters by updating the network in response to the loss function. They adjust the weight and the biases. The loss function fuides the optimiser. 
+### Gradient Descent Optimiser
+It is an iterative algorithm thats begins at a random point on the loss function and moves down its slope in steps until it reaches minimum point of the function. It is the most popular optimiser and it is fast, robust and flexible.
+Algorithm:
+1. Calculate what a small change in each individual weight would do to the loss function
+2. Adjust the parameter based on its gradient (take a step in the determined direction)
+3. Repeat steps 1 and 2 until we have the lowest loss function possible
+
+The gradient here, is the partial derivative of all independant variables. When we do have high variable datasets the loss function can have several local minimas, but we need to find the global minimum. To do this, a proper **learning rate** is used. Taking steps that are too large or too small can hinder reaching the global minima. To make sure this doesn't happen a small number (usually 0.001) is multiplied to scale the gradients. This ensures that any changes made to the weights are quite small.
+
+## Stochastic Gradient Descent
+Instead of calculating the gradient descent for all input data, it is sometimes more efficient to caluclate this for just a subset of data. This is an implementation of the gradient descent that uses batches or random examples on each pass. It also uses something called **momentum** to accumulate gradients from the past steps to determine what might happen in the next steps.
+Back propagation is gradient descent implemented on a network.
+
+## Adagrad
+- Adapts the learning rate specifically to individual features. 
+- Some weights will have different learning rates
+- This is ideal for sparse datasets with many missing input examples
+- Learning rate tends to get smaller with time
+
+## RMSprop
+- This is a special version of Adagrad
+- Accumulates gradients in a fixed window
+
+## Adam
+- Adaptive Movement Estimation
+- Uses the concept of momentum
