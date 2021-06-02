@@ -18,10 +18,15 @@
   link: /#
   dropdown:
     - name: Lecture 01
-      link: /blog/Robotics(MTRN4230/Lecture-1
+      link: /blog/Robotics(MTRN4230)/Lecture-1/
+- name: Robot-Design-MTRN4110
+  link: /#
+  dropdown:
+    - name: Lecture 01
+      link: /blog/Robot-Design-MTRN4110/01-Locomotion-and-Perception/
 - name: Docker
   link: /#
   dropdown:
   - name: Basic Concepts
-    link: /blog/Docker/BasicConcepts
+    link: /blog/Docker/BasicConcepts/
     
