@@ -60,8 +60,8 @@
 
 #### Wheel Rotation and Velocity Relationship
 
-Assuming no Slippage
-
 ![1622593601169.png](./1622593601169.png)
+
+Assuming no Slippage
 
 $V_{wheel}$ = $\omega_{wheel}$*$r_{wheel}$
