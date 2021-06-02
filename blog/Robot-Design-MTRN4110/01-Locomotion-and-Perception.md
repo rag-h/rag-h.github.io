@@ -1,6 +1,7 @@
 <script type="text/javascript" charset="utf-8" 
 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,
 https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
+
 # Locomotion
 
 ### Case Study of the DAPAR Robotics Challenge
@@ -65,3 +66,11 @@ https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 Assuming no Slippage
 
 $V_{wheel}$ = $\omega_{wheel}$*$r_{wheel}$
+
+![diff-drive.png](./diff-drive.png)
+
+$\xi$ = $\xi_R$ + $\xi_L$
+
+$\begin{bmatrix}v_x \\ v_y \\ \omega\end{bmatrix}$ = $\begin{bmatrix} v_{x}^R \\ v_{y}^R \\ \omega^R  \end{bmatrix}$ + $\begin{bmatrix} v_{x}^L \\ v_{y}^L \\ \omega^L \end{bmatrix}$
+
+$\begin{bmatrix}v_x \\ v_y \\ \omega\end{bmatrix}$ = $\begin{bmatrix}\frac{r\omega_R}{2} \\ 0 \\ \frac{r\omega_R}{2l}\end{bmatrix}$ + $\begin{bmatrix}\frac{r\omega_L}{2} \\ 0 \\ -\frac{r\omega_L}{2l}\end{bmatrix}$ = $\begin{bmatrix}\frac{r\omega_R + r\omega_L}{2} \\ 0 \\ \frac{r\omega_R - r\omega_L}{2l}\end{bmatrix}$
